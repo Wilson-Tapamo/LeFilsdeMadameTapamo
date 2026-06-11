@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://le-fils-de-madame-tapamo.vercel.app/sitemap.xml
