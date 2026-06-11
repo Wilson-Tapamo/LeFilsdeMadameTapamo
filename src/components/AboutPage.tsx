@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { timelineEvents, passionsData } from '../data';
 import { Camera, RefreshCw, Sparkles, BookOpen, Brain, Terminal, Binary, Atom } from 'lucide-react';
-import profileImg from '../assets/wilson.png';
+import profileImg from '../../assets/wilson.png';
 
 export default function AboutPage() {
   const [activePassion, setActivePassion] = useState<string | null>(null);
