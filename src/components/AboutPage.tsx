@@ -2,12 +2,13 @@ import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { timelineEvents, passionsData } from '../data';
 import { Camera, RefreshCw, Sparkles, BookOpen, Brain, Terminal, Binary, Atom } from 'lucide-react';
+import profileImg from '../assets/wilson.png';
 
 export default function AboutPage() {
   const [activePassion, setActivePassion] = useState<string | null>(null);
   
   // Photo uploader state to let Wilson load his portrait and apply the Studio Noir & Blanc filter
-  const [profileImage, setProfileImage] = useState<string | null>(null);
+  const [profileImage, setProfileImage] = useState<string | null>(profileImg);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
