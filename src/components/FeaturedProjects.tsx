@@ -30,13 +30,16 @@ export default function FeaturedProjects({ onNavigateToProjects }: FeaturedProje
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {featured.map((p, index) => (
-            <motion.div
+            <motion.a
               key={p.id}
+              href={p.demoUrl}
+              target="_blank"
+              referrerPolicy="no-referrer"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-zinc-950/40 border border-white/8 backdrop-blur-md rounded-3xl p-6 group hover:border-white/20 transition-all duration-300"
+              className="bg-zinc-950/40 border border-white/8 backdrop-blur-md rounded-3xl p-6 group hover:border-white/20 transition-all duration-300 block"
             >
               <div className="flex justify-between items-start mb-4">
                 <span className="text-[10px] font-mono tracking-widest text-cyan-400 uppercase">
@@ -66,7 +69,7 @@ export default function FeaturedProjects({ onNavigateToProjects }: FeaturedProje
                   <span className="text-emerald-400 text-[10px] font-medium">{p.metrics[0]}</span>
                 </div>
               )}
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
