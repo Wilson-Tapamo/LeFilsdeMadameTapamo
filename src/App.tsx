@@ -8,10 +8,12 @@ import ProjectsPage from './components/ProjectsPage';
 import AboutPage from './components/AboutPage';
 import BlogPage from './components/BlogPage';
 import FeaturedProjects from './components/FeaturedProjects';
+import SplashScreen from './components/SplashScreen';
 import ContactModal from './components/ContactModal';
 import { Mail, ArrowUpRight, Github, Heart, MessageSquareDot } from 'lucide-react';
 
 export default function App() {
+  const [showSplash, setShowSplash] = useState(true);
   const [activeTab, setActiveTab] = useState<'accueil' | 'projets' | 'moi' | 'blog'>('accueil');
   const [isContactOpen, setIsContactOpen] = useState(false);
 
@@ -21,7 +23,10 @@ export default function App() {
   }, [activeTab]);
 
   return (
-    <div className="relative min-h-screen bg-[#050505] text-white selection:bg-purple-500 selection:text-white font-sans overflow-x-hidden antialiased">
+    <>
+      {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
+
+      <div className={`relative min-h-screen bg-[#050505] text-white selection:bg-purple-500 selection:text-white font-sans overflow-x-hidden antialiased ${showSplash ? 'hidden' : ''}`}>
       
       {/* Editorial Aesthetic Aurora & Grid Overlay */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -169,5 +174,6 @@ export default function App() {
       />
 
     </div>
+    </>
   );
 }
