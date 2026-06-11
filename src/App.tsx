@@ -10,7 +10,7 @@ import BlogPage from './components/BlogPage';
 import FeaturedProjects from './components/FeaturedProjects';
 import SplashScreen from './components/SplashScreen';
 import ContactModal from './components/ContactModal';
-import { Mail, ArrowUpRight, Github, Heart, MessageSquareDot } from 'lucide-react';
+import { Mail, ArrowUpRight, Github, Heart, MessageSquareDot, Phone } from 'lucide-react';
 
 export default function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -140,7 +140,7 @@ export default function App() {
             {/* Custom references link */}
             <div className="flex items-center gap-5">
               <a 
-                href="https://github.com" 
+                href="https://github.com/Wilson-Tapamo" 
                 target="_blank" 
                 referrerPolicy="no-referrer"
                 className="text-gray-400 hover:text-white flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider transition-colors"
@@ -154,6 +154,13 @@ export default function App() {
               >
                 <Mail className="w-3.5 h-3.5" />
                 <span>E-MAIL</span>
+              </a>
+              <a 
+                href="tel:+237680446788" 
+                className="text-gray-400 hover:text-white flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-wider transition-colors"
+              >
+                <Phone className="w-3.5 h-3.5" />
+                <span>+237 680 44 67 88</span>
               </a>
             </div>
 
